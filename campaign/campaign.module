@@ -18,14 +18,14 @@ function campaign_theme($existing, $type, $theme, $path) {
 	      	'template' => 'campaign',
 	    ],
 		'campaignDetails' => [
-		    'variables' => 
-			    ['params' => []
+		    'variables' => [
+			    'campaignDetails' => []
 			],
             'template' => 'campaign-details',
 		],
 		'campaignList' => [
-		    'variables' => 
-			    ['params' => []
+		    'variables' => [
+				'campaignList' => []
 			],
             'template' => 'campaign-list',
 		],
