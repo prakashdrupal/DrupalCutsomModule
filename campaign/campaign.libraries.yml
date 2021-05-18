@@ -1,0 +1,8 @@
+campaign-style:
+  version: 1.x
+  css:
+    theme:
+      css/form-steps.css: {}
+  js:
+    js/form-steps.js: {}
+    js/multisteps-form.js: {}

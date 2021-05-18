@@ -1,0 +1,8 @@
+name: Campaign
+description: Create a campaign based fundraiser module
+package: custom
+type: module
+author: Tej Prakash Prasad
+core: '8.x'
+core_version_requirement: ^8 || ^9
+libraries: campaign/campaign-style

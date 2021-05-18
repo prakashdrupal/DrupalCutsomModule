@@ -1,0 +1,23 @@
+campaign.content:
+  path: '/campaign-steps'
+  defaults:
+    _controller: '\Drupal\campaign\Controller\CampaignController::content'
+    _title: 'Campaign Steps'
+  requirements:
+    _permission: 'access content'
+
+campaign.get_campaign_list:
+  path: '/campaign-list'
+  defaults:
+    _controller: '\Drupal\campaign\Controller\CampaignController::getCampaignList'
+    _title: 'Campaign List'
+  requirements:
+    _access: 'TRUE'    
+
+campaign.getCampaignDetails:
+  path: '/campaign-details'
+  defaults:
+    _controller: '\Drupal\campaign\Controller\CampaignController::getCampaignDetails'
+    _title: 'Campaign Details'
+  requirements:
+    _access: 'TRUE'

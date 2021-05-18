@@ -1,0 +1,116 @@
+<main role="main">
+  <!-- Login starts -->
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="login-box">
+          <header>
+            <h2>Start your campaign
+            </h2> 
+          </header>
+          <div class="login-body">
+            <form action="campaign-steps" autocomplete="off" class="form" id="formStartCampaign" name="formLogin" role="form">
+              <div class="row justify-content-center">
+                <div class="col-12">
+                  <!-- progressbar -->
+                  <ul id="progressbar">
+                    <li class="active" id="personal">
+                      <strong>General Information
+                      </strong>
+                    </li>
+                    <li class="" id="account">
+                      <strong>Fund Information
+                      </strong>
+                    </li>
+                  </ul>
+                  <!-- fieldsets -->
+                  <fieldset>
+                    <div class="form-group">
+                      <label for="purpose">Please select the purpose of raising funds
+                      </label>
+                      <select id="mySelect" data-show-content="true" class="form-control border">
+                        <option>Select..
+                        </option>
+                        <option>Medical
+                        </option>
+                        <option>NGO
+                        </option>
+                        <option>Personal Cause
+                        </option>
+                      </select>
+                    </div> 
+                    <div class="form-group">
+                      <label for="name">Your Name
+                      </label>
+                      <input class="form-control" id="urname" name="urname" required="" type="text"> 
+                    </div>
+                    <div class="form-group">
+                      <label>Email Address
+                      </label>
+                      <input class="form-control" id="emailid" required="" type="email"> 
+                    </div>
+                    <div class="form-group">
+                      <label>Mobile Number
+                      </label>
+                      <input class="form-control" type="tel" name="telphone" placeholder="+91 888 888 8888" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" maxlength="12" title="Ten digits code" required/> 
+                    </div>
+                    <div class="form-group">
+                      <label>Create Password
+                      </label>
+                      <input autocomplete="new-password" class="form-control" id="pwd1" required="" type="password"> 
+                    </div>
+                    <div class="btn-login-group">
+                      <div class="form-check small">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox"> 
+                          <span>I agree to the 
+                            <a href="#">Terms & Conditions
+                            </a>
+                          </span> 
+                        </label>
+                      </div>
+                    </div>
+                    <button id="emi_submit" type="submit" class="buttonstyle text-uppercase">Submit
+                    </button>
+                    <input type="button" name="next" class="btn btn-primary next action-button" value="Next" /> 
+                  </fieldset>
+                  <fieldset>
+                    <div class="form-group">
+                      <label for="title">Title
+                      </label>
+                      <input class="form-control" id="title" name="title" required="" type="text"> 
+                    </div>
+                    <div class="form-group">
+                      <label for="amount">Goal Amount
+                      </label>
+                      <input class="form-control" id="amount" name="amount" required="" type="text"> 
+                    </div>
+                    <div class="form-group">
+                      <label for="benname">Beneficiary name
+                      </label>
+                      <input class="form-control" id="benname" name="benname" required="" type="text"> 
+                    </div>
+                    <div class="form-group">
+                      <label for="story">Story with amount
+                      </label>
+                      <textarea class="form-control" id="story" name="story">
+                      </textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="otp">Enter OTP
+                      </label>
+                      <input class="form-control" id="otp" name="otp" required="" type="" maxlength="4"> 
+                    </div> 
+                    <input type="button" name="previous" class="btn previous action-button-previous" value="Previous" />
+                    <input type="submit" name="next" class="btn btn-primary next action-button" value="Submit" /> 
+                  </fieldset> 
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Login end -->
+</main>

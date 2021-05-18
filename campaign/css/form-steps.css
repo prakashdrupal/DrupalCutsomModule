@@ -1,0 +1,193 @@
+#formStartCampaign {
+    position: relative;
+    margin-top: 20px
+}
+
+#formStartCampaign fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    position: relative
+}
+
+.form-card {
+    text-align: left
+}
+
+#formStartCampaign fieldset:not(:first-of-type) {
+    display: none
+}
+
+#msfoformStartCampaignrm input,
+#formStartCampaign textarea {
+    padding: 8px 15px 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    background-color: #ECEFF1;
+    font-size: 16px;
+    letter-spacing: 1px
+}
+
+#formStartCampaign input:focus,
+#formStartCampaign textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #673AB7;
+    outline-width: 0
+}
+
+#formStartCampaign .action-button {
+    width: 100px;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 0px 10px 5px;
+    float: right
+}
+
+#formStartCampaign .action-button:hover,
+#formStartCampaign .action-button:focus {
+    background-color: #311B92
+}
+
+#formStartCampaign .action-button-previous {
+    width: 100px;
+    background: #616161;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px 10px 0px;
+}
+
+#formStartCampaign .action-button-previous:hover,
+#formStartCampaign .action-button-previous:focus {
+    background-color: #000000
+}
+
+.card {
+    z-index: 0;
+    border: none;
+    position: relative
+}
+
+.fs-title {
+    font-size: 25px;
+    color: #673AB7;
+    margin-bottom: 15px;
+    font-weight: normal;
+    text-align: left
+}
+
+.purple-text {
+    color: #673AB7;
+    font-weight: normal
+}
+
+.steps {
+    font-size: 25px;
+    color: gray;
+    margin-bottom: 10px;
+    font-weight: normal;
+    text-align: right
+}
+
+.fieldlabels {
+    color: gray;
+    text-align: left
+}
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey;
+    padding: 0;
+    margin: 0 auto 25px auto;
+    display: flex;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+#progressbar .active {
+    color: #db2414;
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 14px;
+    width: 50%;
+    position: relative;
+    font-weight: 400
+}
+
+#progressbar #account:before {
+    content: "2";
+}
+
+#progressbar #personal:before {
+    content: "1";
+}
+
+#progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 20px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #db2414;
+}
+
+.progress {
+    height: 20px
+}
+
+.progress-bar {
+    background-color: #db2414;
+}
+
+#otp {
+    padding-left: 15px;
+    letter-spacing: 42px;
+    border: 0;
+    background-image: linear-gradient(to left, rgba(152, 152, 152, 1) 70%, rgba(152, 152, 152, 0) 0%);
+    background-position: bottom;
+    background-size: 50px 1px;
+    background-repeat: repeat-x;
+    background-position-x: 35px;
+    width: 190px;
+}

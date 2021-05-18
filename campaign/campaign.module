@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Campaign module help and theme functions.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function campaign_theme($existing, $type, $theme, $path) {
+  
+  	return [
+	    'campaign' => [
+	      	'variables' => [
+	      		'campaign' => []
+	      	],
+	      	'template' => 'campaign',
+	    ],
+		'campaignDetails' => [
+		    'variables' => 
+			    ['params' => []
+			],
+            'template' => 'campaign-details',
+		],
+		'campaignList' => [
+		    'variables' => 
+			    ['params' => []
+			],
+            'template' => 'campaign-list',
+		],
+	];
+}
