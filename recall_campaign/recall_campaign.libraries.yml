@@ -1,0 +1,7 @@
+big-sliders:
+  version: 1.x
+  css:
+    theme:
+      css/big-slider.css: {}
+  js:
+   js/big-slider.js: {}

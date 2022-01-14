@@ -1,0 +1,60 @@
+<?php
+
+function recall_campaign_schema() {
+  $schema['recall_campaign'] = array(
+    'fields' => array(
+      'id'=>array(
+        'type'=>'serial',
+        'not null' => TRUE,
+      ),
+      'vin'=>array(
+        'type' => 'varchar',
+        'length' => 50,
+        'not null' => TRUE,
+      ),
+      'field_recall_campaign_name'=>array(
+        'type' => 'varchar',
+        'length' => 50,
+        'not null' => TRUE,
+      ),
+      'field_ref_no'=>array(
+        'type' => 'varchar',
+        'length' => 50,
+        'not null' => TRUE,
+      ),
+      'field_model'=>array(
+        'type' => 'varchar',
+        'length' => 50,
+        'not null' => TRUE,
+      ),
+      'field_error_msg'=>array(
+        'type' => 'text',
+        'not null' => TRUE,
+      ),
+      'recall_campain_info'=>array(
+        'type' => 'text',
+        'not null' => TRUE,
+      ),
+      'field_situation'=>array(
+        'type' => 'text',
+        'not null' => TRUE,
+      ),
+      'field_effect'=>array(
+        'type' => 'text',
+        'not null' => TRUE,
+      ),
+      'field_measure'=>array(
+        'type' => 'text',
+        'not null' => TRUE,
+      ),
+			'field_vin_recall_status'=>array(
+        'type' => 'varchar',
+        'length' => 50,
+        'not null' => TRUE,
+      ),
+    ),
+    'primary key' => array('id'),
+  );
+
+  return $schema;
+}

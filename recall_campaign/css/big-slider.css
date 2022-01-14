@@ -1,0 +1,22 @@
+.video-btn-c{
+	padding: 0;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    margin-right: 15px;
+    width: 45px;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: 45px;
+}
+.video-btn-c.pause-btn {
+    background-position: 0 -46px;
+}
+
+.main-box-slide .first{
+	display: inline-block;
+}
+.main-box-slide .second{
+	display: none;
+}

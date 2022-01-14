@@ -1,0 +1,39 @@
+<?php
+
+/**
+* Implements hook_menu()
+*/
+function recall_campaign_array() {
+  return array(
+    'admin/content/recall_campaign' => array(
+      'title' => 'Recall Campaign list',
+      'route_name' => 'recall_campaign_list',
+    ),
+    'admin/content/recall_campaign/add' => array(
+      'title' => 'Recall Campaign Add',
+      'route_name' => 'recall_campaign_add',
+    ),
+    'admin/content/recall_campaign/delete/%' => array(
+      'title' => 'Delete Recall Campaign',
+      'route_name' => 'recall_campaign_delete',
+    ),
+  );
+}
+
+/**
+ * @param $existing
+ * @param $type
+ * @param $theme
+ * @param $path
+ * @return array
+ */
+function recall_campaign_theme($existing, $type, $theme, $path) {
+    return [
+        'recall_campaign' => [
+            'variables' => ['sliders_list' => NULL, 'page'=> NULL, 'slider_crousal_status' => NULL],
+            'template' => 'recall_campaign',
+            
+        ],
+    ];
+}
+

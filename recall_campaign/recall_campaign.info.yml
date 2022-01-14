@@ -1,0 +1,8 @@
+name: Recall Campaign
+description: 'Custom Recall Campaign Module.'
+type: module
+author: Tej Prakash Prasad
+core: 8.x
+package: Custom
+dependencies:
+  - block
