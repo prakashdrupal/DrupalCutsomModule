@@ -1,0 +1,4 @@
+recall_campaign_list:
+  title: Recall Campaign
+  route_name: recall_campaign_list
+  base_route: system.admin_content

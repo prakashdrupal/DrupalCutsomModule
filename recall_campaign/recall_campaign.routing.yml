@@ -1,0 +1,39 @@
+recall_campaign_list:
+  path: '/admin/content/recall_campaign'
+  defaults:
+    _controller: '\Drupal\recall_campaign\Controller\AdminController::content'
+  requirements:
+    _permission: 'access recall_campaign content'
+    
+recall_campaign_add:
+  path: '/admin/content/recall_campaign/add'
+  defaults:
+    _form: '\Drupal\recall_campaign\AddForm'
+    _title: 'Create Recall Campaign'
+  requirements:
+    _permission: 'edit recall_campaign content'
+
+recall_campaign_edit:
+  path: 'admin/content/recall_campaign/edit/{id}'
+  defaults:
+    _form: '\Drupal\recall_campaign\AddForm'
+    _title: 'Edit Recall Campaign'
+  requirements:
+    _permission: 'edit recall_campaign content'
+
+recall_campaign_delete:
+  path: '/admin/content/recall_campaign/delete/{id}'
+  defaults:
+    _form: 'Drupal\recall_campaign\DeleteForm'
+    _title: 'Delete Recall Campaign'
+  requirements:
+    _permission: 'delete recall_campaign content'
+
+recall_campaign.import_excel:
+  path: '/admin/recall_campaign/sheet/import'
+  defaults:
+    _title: 'Import Recall Campaign XLS'
+    _form: '\Drupal\recall_campaign\ImporterForm'
+  requirements:
+    _permission: 'Import form'
+

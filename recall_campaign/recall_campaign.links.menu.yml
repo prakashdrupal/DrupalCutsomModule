@@ -1,0 +1,6 @@
+recall_campaign.admin:
+  title: 'Import XLS for Recall Campaign'
+  parent: system.admin_config_development
+  route_name: 'recall_campaign.import_excel'
+  description: 'Import Recall Campaign XLS Path Link'
+  weight: 15

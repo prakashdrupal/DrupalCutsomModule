@@ -1,0 +1,104 @@
+{% if sliders_list is not empty %}
+ <style type="text/css">
+    {% for i,slider in sliders_list %}
+        {% if slider.video_url is not empty %}
+        .main-slider.video .owl-dots button:nth-child({{i+1}}):before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 4px 0 4px 7px;
+            top: 2px;
+            left: 4px;
+            border-color: transparent transparent transparent #fff; 
+        }
+        {% endif %}
+    {% endfor %}
+</style>
+ {% if page == 'vehicle-services' %}
+ <div class="main-slider inner-page-sm relative vehicle-video">
+      {% for slider in sliders_list %}  
+        
+        {% if slider.video_url is not empty %}
+          {% if slider.video_type == 'youtube' %}
+            <div class="item" data-videoplay="{{ slider.autoplay }}">
+              <iframe width="560" height="315" src="{{ slider.video_url }}?enablejsapi=1&amp;modestbranding=1&amp;rel=0&amp;showinfo=0&amp;autoplay={{ slider.autoplay }}&amp;loop=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen></iframe>
+              <div class="container"> {{ slider.content|raw }}</div>
+            </div>
+          {% else %}
+            <div class="item">
+              <video id="myVideo" class="video-full video-js vjs-default-skin" width="1680px" height="756px" controls="" autoplay="" iphone-inline-video="" loop=""  playsinline="" preload="auto" data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'>
+                <source src="{{ slider.video_url }}" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
+                <span class="main-box-slide">
+                  <button class="video-btn-c pause-btn" style="display: none;" onclick="playVid()" id="play" type="button"></button>
+                  <button class="video-btn-c" onclick="pauseVid()" id="pause" type="button"></button>
+                </span>
+
+              <div class="container">
+                {{ slider.content|raw }}
+              </div>
+            </div>
+          {% endif %}
+        {% else %}
+          <div class="item">
+            <picture>
+              <source media="(max-width: 991px)" srcset="{{ slider.device_image }}">
+              <img src="{{ slider.device_image }}" class="slide-image" width="1680" height="756" alt="3gtdetail">
+            </picture>
+          <picture>
+          <div class="container">
+            {{ slider.content|raw }}
+          </div>
+           </div>
+        {% endif %}
+    {% endfor %}
+  </div>
+ {% else %}
+   {% if page == 'home' %}
+   <div class="main-slider home-page video">
+   {% else %}
+   <div class="main-slider inner-page-sm relative">
+    {% endif %}
+      <div class="owl-carousel" id="module-slider">  
+      {% for slider in sliders_list %}	
+        
+        {% if slider.video_url is not empty %}
+          {% if slider.video_type == 'youtube' %}
+            <div class="item" data-videoplay="{{ slider.autoplay }}">
+             <iframe width="560" height="315" src="{{ slider.video_url }}?enablejsapi=1&amp;modestbranding=1&amp;rel=0&amp;showinfo=0&amp;autoplay={{ slider.autoplay }}&amp;loop=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen></iframe>
+             <div class="container"> {{ slider.content|raw }}</div>
+           </div>
+          {% else %}
+            <div class="item" data-videosrc="{{ slider.video_url }}" data-videoplay="{{ slider.autoplay }}">
+              <!-- <img src='{{ slider.image }}'/> -->
+              <div class="container">
+              <span class="main-box-slide">
+                <button class="video-btn-c pause-btn first" onclick="play(this)" id="play" type="button"></button>
+                <button class="video-btn-c second" onclick="pause(this)" id="pause" type="button"></button>
+              </span>
+              {{ slider.content|raw }}
+              </div>
+            </div>
+          {% endif %}
+        {% else %}
+          <div class="item active activelink">
+          <picture>
+            <source media="(max-width: 767px)" srcset="{{ slider.device_image }}">
+            <source media="(max-width: 991px)" srcset="{{ slider.device_image }}">
+            <img src="{{ slider.image }}" class="slide-image" width="1680" height="756" alt="3gtdetail">
+          </picture>
+          <div class="container">
+            {{ slider.content|raw }}
+          </div>
+           </div>
+        {% endif %}
+    {% endfor %}
+     </div>
+  </div>
+  {% endif %} <!-- page == 'vehicle-services' -->
+{% else %}
+  <div class="ttop-header">&nbsp;</div>
+{% endif %}
